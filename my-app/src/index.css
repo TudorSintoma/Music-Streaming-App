@@ -1,0 +1,470 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cairo', sans-serif;
+  height: 100vh;
+}
+
+/* Home Page Background */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-image: url('./background.jpg'); /* Adjust path as necessary */
+  background-size: cover; /* Ensure image covers the entire screen */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  image-rendering: auto; /* Preserves quality during rendering */
+}
+
+.about-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  background-image: url('./about-background.jpg'); /* Adjust path as necessary */
+  background-size: cover; /* Ensure image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  image-rendering: auto; /* Preserves quality during rendering */
+  padding: 20px
+}
+
+/* Responsive Adjustments for High-Resolution Screens */
+@media (min-resolution: 2dppx) {
+  .home-container, .login-container, .create-container, .about-container {
+    background-size: 100% auto; /* Adjusts for higher resolution screens */
+  }
+}
+.create-account-link {
+  cursor:pointer;
+}
+/* Navbar Styles */
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(170, 161, 161, 0.6); /* Semi-transparent black */
+  padding: 10px 0;
+}
+
+.nav-button {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 16px;
+  margin: 0 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nav-button:hover {
+  text-decoration: underline;
+}
+
+/* Home Page Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  width: 100%; /* Ensure content takes full width */
+  margin-top: 80px; /* Space from the top */
+  padding-left: 0; /* Remove any padding */
+}
+
+/* Description Styling */
+.title {
+  text-align: left; /* Align text to the left */
+  color: white; /* Ensure text color is white */
+  margin: 0; /* Remove any margin */
+  font-size: 80px;
+  width: 100%; /* Ensure description takes full width */
+} 
+.description {
+  text-align: left; /* Align text to the left */
+  color: white; /* Ensure text color is white */
+  margin: 0; /* Remove any margin */
+  width: 100%; /* Ensure description takes full width */
+}
+
+.description h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: white; /* Ensure the color of the heading is white */
+}
+
+.description p {
+  font-size: 18px;
+  max-width: 600px;
+  color: white; /* Ensure paragraph text is white */
+}
+
+/* Wood Texture for Login */
+.login-container,
+.create-container,
+.genre-container,
+.forgot-password-container,
+.upload-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover; /* Ensure the texture covers the entire screen */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Don't repeat the texture */
+  color: #fff;
+}
+
+.login-form-container,
+.create-form-container,
+.forgot-password-form-container,
+.upload-form-container{
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+  background-image: url('./wood-texture.jpg');
+}
+
+.login-form-container h1, .create-form-container h1, .forgot-password-form-container h1, .upload-form-container h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.login-form-container p {
+  font-size: 16px;
+  color: #000000;
+  margin-top: 10px;
+}
+
+.login-form-container span {
+  font-size: 16px;
+  color: #09a9e9;
+  margin-top: 10px;
+}
+
+.login-form-container input, .create-form-container input, .forgot-password-form-container input, .upload-form-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f7f7f7;
+}
+
+.login-form-container button, .create-form-container button, .forgot-password-form-container button, .upload-form-container button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #7BC1FA;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form-container button:hover, .create-form-container button:hover, .forgot-password-form-container button:hover, .upload-form-container button:hover{
+  background-color: #5aa8e8;
+  text-decoration: underline;
+}
+
+.back-home-button, .back-button {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #7BC1FA;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.back-home-button:hover, .back-button:hover {
+  background-color: #5aa8e8;
+  text-decoration: underline;
+}
+
+.navbar-about {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: right;
+  background-color: rgba(70, 65, 65, 0.6); /* Semi-transparent black */
+  padding: 10px 0;
+  margin-right: 239px;
+}
+
+.nav-about-button {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 16px;
+  margin: 0 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nav-about-button:hover {
+  text-decoration: underline;
+}
+
+/* About Page */
+.about-container {
+  display: flex;
+  flex-direction: column; /* Allows the navbar to stack above the text */
+  align-items: flex-end; /* Align text to the right */
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px; /* Adds spacing around the content */
+}
+
+.about-text {
+  color: white; /* Text color to contrast the background */
+  max-width: 600px;
+  text-align: right;
+  padding: 20px;
+  margin-top: 50px; /* Prevents overlap with navbar */
+}
+
+.about-text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Contact Page */
+.contact-container {
+  display: flex;
+  flex-direction: column; /* Allows navbar to stack above the content */
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between; /* Ensures content is spread across the page */
+  align-items: center;
+  height: calc(100vh - 60px); /* Adjust height to account for navbar */
+  padding: 40px;
+}
+
+.contact-left {
+  color: white;
+  max-width: 400px;
+}
+
+.contact-left h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contact-left p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px; /* Spacing between icons */
+}
+
+.social-icons img {
+  width: 40px; /* Icon size */
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Contact Form Section */
+.contact-form-container {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+.contact-form-container h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+  color:rgba(0, 0, 0, 0.3)
+}
+.contact-content{
+  color:rgba(0, 0, 0, 0.3)
+}
+.contact-left {
+  color: rgb(130, 130, 130); /* Ensure text is black */
+  max-width: 400px;
+}
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact-form-container textarea {
+  resize: none;
+  height: 100px; /* Fixed height for message field */
+}
+
+.contact-form-container button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #7BC1FA; /* Matches theme */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form-container button:hover {
+  background-color: #5aa8e8;
+}
+
+.navbar-contact {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(190, 180, 180, 0.6); /* Semi-transparent black */
+  padding: 10px 0;
+}
+
+.account-selection {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.account-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-image {
+  width: 200px; /* Adjust size as needed */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.account-button:hover .account-image {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.account-type-form-container {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.account-type-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Full height of the screen */
+  padding: 0 50px;
+}
+
+.account-type-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* Full height of the screen */
+  padding: 0 50px; /* Padding to ensure the buttons aren't at the edges */
+}
+
+.account-type-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 50px; /* Adjust this margin to bring buttons closer to the center */
+}
+
+.account-type-button {
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.account-type-button:hover {
+  transform: scale(1.05);
+}
+
+.account-type-text {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.listener-text {
+  color: rgb(46, 224, 46);
+}
+
+.artist-text {
+  color: red;
+}
+
+
+/*
+button[type="submit"] {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+*/
+
+
+
+
+
